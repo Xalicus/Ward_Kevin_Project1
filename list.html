@@ -17,7 +17,7 @@
 		<meta name="MobileOptimized" content=320" />
 		
 		<!-- Document title -->
-		<title>HTML5 Template</title>
+		<title>Pet's List</title>
 		
 		<!-- Link CSS -->
 		<link href="css/styles.css" rel="stylesheet" type="text/css" />
@@ -29,16 +29,40 @@
 	<body>
 	
 		<!-- Page content lives here. -->
-		<a href="index.html"><img src="img/img.png" width="120" height="150" title="My Joker Logo" /></a>
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<h6>Heading 6</h6>
-		
-		<p>This is a paragraph.</p>
-		
+		<a href="index.html"><img src="img/img.png" width="80" height="100" title="My Joker Logo" /></a>
+		<h2>Let's Add a Pet!</h2>
+		<p>Choose the type of pet you want!.</p>
+		<form action="main.js" method="post">
+			<ul>
+				<li><label for="petType">Pet Type:</label>
+					<select name="petType" id="petType" size="1">
+						<optgroup label="Pet Type:">
+							<option value="0" selected="selected"></option>
+							<option value="dog">Dogs</option>
+							<option value="cat">Cats</option>
+							<option value="rodent">Rodents</option>
+							<option value="bird">Birds</option>
+							<option value="farm">Farm Animals</option>
+						</optgroup>
+					</select></li>
+					
+				<li><label for="fullName">Full Name:</label>
+					<input type="text" id="fullName" /></li>
+					
+				<li>Gender: 
+					<label><input type="radio" name="gender" value="male" />Male</label>
+					<label><input type="radio" name="gender" value="female" />Female</label></li>
+					
+				<li><label>Favorite Animal: <input type="checkbox" name="favorite" value="myFavAnimal" /></label></li>
+				
+				<li><label>Date Bought: <input type="date" min="1" max="2099" /></label></li>
+				
+				<li><label>How Many?: <input type="range" name="quantity" min="1" max="10" /></label></li>
+				
+				<li><label>Comments: <textarea></textarea></label></li>
+				<li><input type="submit" /> <input type="reset" /></li>
+			</ul>
+		</form>
 	</body>
 </html>
 
