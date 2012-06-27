@@ -38,35 +38,39 @@ Name: Project 1
 		<h2>Let's Add a Pet!</h2>
 		<p>Choose the type of pet you want!.</p>
 		<form action="main.js" method="post">
-			<ul>
-				<li><label for="petType">Pet Type:</label>
-					<select name="petType" id="petType" size="1">
-						<optgroup label="Pet Type:">
-							<option value="0" selected="selected"></option>
-							<option value="dog">Dogs</option>
-							<option value="cat">Cats</option>
-							<option value="rodent">Rodents</option>
-							<option value="bird">Birds</option>
-							<option value="farm">Farm Animals</option>
-						</optgroup>
-					</select></li>
+			<fieldset>
+				<legend>Choose Wisely!</legend>
+				<ul>
+					<li><label for="petType">Pet Type:</label>
+						<select name="petType" id="petType" size="1">
+							<optgroup label="Pet Type:">
+								<option value="0" selected="selected"></option>
+								<option value="dog">Dogs</option>
+								<option value="cat">Cats</option>
+								<option value="rodent">Rodents</option>
+								<option value="bird">Birds</option>
+								<option value="farm">Farm Animals</option>
+							</optgroup>
+						</select></li>
+						
+					<li><label for="fullName">Full Name:</label>
+						<input type="text" id="fullName" /></li>
+						
+					<li>Gender: 
+						<label for="male">Male: </label><input type="radio" name="gender" value="male" id="male" />
+						<label for="female">Female: </label><input type="radio" name="gender" value="female" id="female" /></li>
+						
+					<li><label for="faveAnim">Favorite Animal: </label><input type="checkbox" name="favorite" value="myFavAnimal" id="faveAnim" /></li>
 					
-				<li><label for="fullName">Full Name:</label>
-					<input type="text" id="fullName" /></li>
+					<li><label for="dateBought">Date Bought: </label><input type="date" min="1" max="2099" id="dateBought" /></li>
 					
-				<li>Gender: 
-					<label><input type="radio" name="gender" value="male" />Male</label>
-					<label><input type="radio" name="gender" value="female" />Female</label></li>
+					<li><label for="howMany">How Many?: </label><input type="range" name="quantity" min="1" max="10" id="howMany"/></li>
 					
-				<li><label>Favorite Animal: <input type="checkbox" name="favorite" value="myFavAnimal" /></label></li>
-				
-				<li><label>Date Bought: <input type="date" min="1" max="2099" /></label></li>
-				
-				<li><label>How Many?: <input type="range" name="quantity" min="1" max="10" /></label></li>
-				
-				<li><label>Comments: <textarea></textarea></label></li>
-				<li><input type="submit" /> <input type="reset" /></li>
-			</ul>
+					<li><label for="comments">Comments: </label><textarea id="comments"></textarea></li>
+					<li><input type="submit" /> <input type="reset" /></li>
+					<li><a href="#">Show Data</a> : <a href="#">Clear Data</a></li>
+				</ul>
+			</fieldset>
 		</form>
 		<!-- Footer -->
 		<footer>
